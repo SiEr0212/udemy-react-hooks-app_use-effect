@@ -11,8 +11,8 @@ function App() {
   }, []);//the fist time the compnent is rendered becaus of [] at the end
 
   useEffect(() => {
-    console.log("make mistakes and learn");
-  });// runs on mounting and every update no [] at he  end
+    born ? console.log("make mistakes and learn"): born = true;
+  });// normally it runs on mounting and every update(no [] at he  end), in this case on every update
 
   const growHandle = () => {
     setGrowth(growth + 10);
